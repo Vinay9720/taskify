@@ -5,16 +5,9 @@ import SingleTodo from "./SingleTodo.tsx";
 type Props = {
   todos: Todo[];
   onChange: React.Dispatch<React.SetStateAction<Todo[]>>;
-  completedTodos: Todo[];
-  onCompletedTodosChange: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const TodoList: React.FC<Props> = ({
-  todos,
-  onChange,
-  completedTodos,
-  onCompletedTodosChange,
-}) => {
+const TodoList: React.FC<Props> = ({ todos, onChange }) => {
   return (
     <div className="todos">
       <span className="todos__heading">Active Tasks</span>
